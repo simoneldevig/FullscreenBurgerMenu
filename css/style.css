@@ -1,0 +1,79 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic,600,600italic,300italic,300,200italic,200,700,700italic,900);
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    background-image: url(../images/bg.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+header{
+    width: 100%;
+}
+nav.menu{
+    width: 42px;
+    height: 36px;
+    float: right;
+    margin: 30px 30px 0 0;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+}
+nav.menu div.strokes {
+    width: 100%;
+    height: 6px;
+    margin: 0 0 6px 0;
+    background: white;
+    transition:  transform 0.3s, opacity 0.1s;
+}
+.hide{
+    opacity: 0;
+    transform:  translateX(-42px);
+}
+
+.animate0{
+    transform: rotate(45deg) translateY(17px);
+}
+
+.animate2{
+    transform: rotate(-45deg) translateY(-17px);
+}
+.fullscreenmenu{
+    background-color: rgba(52, 152, 219, 0);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+    -webkit-transition: background 0.5s ease-in-out, opacity 0.5s;
+    -moz-transition: background 0.5s ease-in-out, opacity 0.5s;
+    -ms-transition: background 0.5s ease-in-out, opacity 0.5s;
+    -o-transition: background 0.5s ease-in-out, opacity 0.5s;
+    transition: background 0.5s ease-in-out, opacity 0.5s;
+    text-align: center
+}
+.fullscreenmenu.show{
+    opacity: 1;
+    background-color: rgba(52, 152, 219, 0.9);
+    -webkit-transition: background 0.5s ease-in-out, visibility 0.5s;
+    -moz-transition: background 0.5s ease-in-out, visibility 0.5s;
+    -ms-transition: background 0.5s ease-in-out, visibility 0.5s;
+    -o-transition: background 0.5s ease-in-out, visibility 0.5s;
+    transition: background 0.5s ease-in-out, visibility 0.5s;
+}
+.fullscreenmenu ul{
+    padding: 10%;
+}
+.fullscreenmenu li a{
+    visibility: inherit;
+    color: white;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 70px;   
+    text-decoration: none;
+    font-weight: 100;
+    text-transform: uppercase;
+    line-height: 150%;
+}
